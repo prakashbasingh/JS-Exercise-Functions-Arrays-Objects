@@ -122,9 +122,9 @@ console.log(makePersonObject(5,'Leia','leia@leia.com'))
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-// function getName(name) {
-//   return 'Hello, my name is ' + person.name;
-// }
+function getName(person) {
+  return 'Hello, my name is ' + person.name;
+}
 // const person = {
 //   id: 1,
 //   name: 'Leia',
@@ -148,13 +148,13 @@ console.log(makePersonObject(5,'Leia','leia@leia.com'))
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-// function appleIndex(array) {
-//   for (i = 0; i < array.lemgth; i++){
-//     if (array[i] === 'apple') {
-//     return i;
-//   } 
-// }
-// console.log(appleIndex());
+function appleIndex(arr) {
+  for (i = 0; i < arr.length; i++){
+    if (arr[i] === 'apple') 
+    return i;
+  } 
+}
+console.log(appleIndex());
 
 /**
  * ### Challenge `isItAnApple`
@@ -171,20 +171,18 @@ console.log(makePersonObject(5,'Leia','leia@leia.com'))
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(arr) {
+   let newArr = []
+  for (i = 0; i<arr.length; i++){
+    if (arr[i] === 'apple') {
+       newArr.push(true);
+    } else {
+       newArr.push(false);
+      }
+  }
+  return newArr;
 }
-// function appleIndex(array) {
-//   const newArray = []
-//   for (i = 0; i < array.lemgth; i++){
-//     if (array[i] === 'apple') {
-//       mewArray.push(true);
-//     } else {
-//       newArray.push(false);
-//     }
-//   }
-//   return newArray;
-// }
+
 
 
 
@@ -229,6 +227,8 @@ function get3rdCar(inventory) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
 
+
+
 /**
  * ### Challenge `getCarInfoByIndex`
  * 
@@ -243,6 +243,9 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  const carInfo = inventory[index];
+  return `This is a ${carInfo.car_make} ${carInfo.car_modal}`
+
 }
 
 /**
