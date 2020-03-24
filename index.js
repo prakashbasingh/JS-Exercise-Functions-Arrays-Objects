@@ -244,7 +244,7 @@ function get3rdCar(inventory) {
 function getCarInfoByIndex(inventory, index) {
   /* code here */
   const carInfo = inventory[index];
-  return `This is a ${carInfo.car_make} ${carInfo.car_modal}`
+  return `This is a ${carInfo.car_make} ${carInfo.car_modal}`;
 
 }
 
