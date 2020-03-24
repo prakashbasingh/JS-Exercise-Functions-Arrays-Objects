@@ -56,13 +56,9 @@ function sayGoodbye(name) {
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
 function temperatureCtoF(number, unit) {
-  if (unit === 'F'){
-    return Math.round(number) + 'F';
-  } else if (unit === 'C') {
-        return Math.round(number*9/5 + 32) + 'F';
-  }
+ return Math.round(number*9/5 + 32);
 }
-console.log(temperatureCtoF(24,'C'));
+console.log(temperatureCtoF(24));
 
 /**
  * ### Challenge `temperatureInF`
@@ -81,8 +77,13 @@ console.log(temperatureCtoF(24,'C'));
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(number, ) {
-  /* code here */
+function temperatureInF(number, unit) {
+  if (unit === 'F'){
+    return Math.round(number) + 'F';
+  }
+  else if (unit === 'C'){
+    return Math.round(number*9/5 + 32) + 'F';
+  }
 }
 
 
@@ -102,9 +103,11 @@ function temperatureInF(number, ) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
-}
+function makePersonObject(id, name, email) {
+  return {id, name, email};
+ };
+console.log(makePersonObject(5,'Leia','leia@leia.com'))
+
 
 /**
  * ### Challenge `getName`
@@ -119,9 +122,15 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
-}
+// function getName(name) {
+//   return 'Hello, my name is ' + person.name;
+// }
+// const person = {
+//   id: 1,
+//   name: 'Leia',
+//   email: 'leia@leia.com',
+// };
+// console.log(getName(person));
 
 
 /**
@@ -139,9 +148,13 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
-}
+// function appleIndex(array) {
+//   for (i = 0; i < array.lemgth; i++){
+//     if (array[i] === 'apple') {
+//     return i;
+//   } 
+// }
+// console.log(appleIndex());
 
 /**
  * ### Challenge `isItAnApple`
@@ -161,6 +174,18 @@ function appleIndex(/* code here */) {
 function isItAnApple(/* code here */) {
   /* code here */
 }
+// function appleIndex(array) {
+//   const newArray = []
+//   for (i = 0; i < array.lemgth; i++){
+//     if (array[i] === 'apple') {
+//       mewArray.push(true);
+//     } else {
+//       newArray.push(false);
+//     }
+//   }
+//   return newArray;
+// }
+
 
 
 
