@@ -220,7 +220,7 @@ var inventory = [
 **/
 function get3rdCar(inventory) {
   const the3rd = inventory[2];
-  return `The is a ${the3rd.car_make} ${the3rd.car_model}`
+  return `The is a ${the3rd.car_make} ${the3rd.car_model} `
 }
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -277,11 +277,11 @@ function getLastCarInfo(array) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(array) {
+function getModelYears(inventory) {
   /* code here */
   let newArray = []
-  for( let i=0; i<array.length; i++){
-    const car = array[i]
+  for( let i=0; i<inventory.length; i++){
+    const car = inventory[i]
     newArray.push(car.car_year)
   }
   return newArray;
@@ -321,10 +321,16 @@ function getCarInfoById(inventory, id) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(inventory, maxYear) {
   /* code here */
+  let oldCar = [];
+  for( let i=0; i<inventory.length; i++){
+    if(inventory[i].car_year <= maxYear){
+      OldCar.push(inventory[i]);
+    } 
+  }
+  return oldCar; 
 }
-
 /**
  * ### Challenge `getGermanCars`
  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
@@ -338,8 +344,15 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
+  let germanCar = [];
+  for (let i = 0; i<inventory.length; i++){
+    if (inventory[i].car_make === 'Audi', inventory[i].car_make === "Mercedes-Benz", inventory[i].car_make === 'VolksWagen', inventory[i].car_make === 'BMW'){
+      germanCar.push(inventory[i]);
+    }
+    return germanCar;
+  }
 }
 
 /**
